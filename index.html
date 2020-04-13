@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <title>Dots</title>
+    <link rel="stylesheet" type="text/css" href="./style.css">
+    <style>
+        .main-wrapper {
+          position: relative;
+          width: 400px;
+          height: 400px;
+          padding: 100px;
+          border: 1px solid black;
+        }
+        .dot {
+          position: absolute;
+          width: 60px;
+          height: 60px;
+          background-color: black;
+          border-radius: 40px;
+          transition: 1s all ease-out;
+          border: 4px solid green;
+        }
+
+        #dot1 {
+          top: 50px;
+          left: 50px;
+        }
+        #dot2 {
+          top: 50px;
+          right: 50px;
+        }
+        #dot3 {
+          bottom: 50px;
+          left: 50px;
+        }
+        #dot4 {
+          bottom: 50px;
+          right: 50px;
+        }
+		
+		#dot5 {
+          top: 50px;
+          left: 260px;
+		  }
+		  
+		#dot6 {
+          top: 260px;
+          right: 50px;
+        }
+		
+        #dot7 {
+          bottom: 275px;
+          left: 50px;
+        }
+		
+        #dot8 {
+          bottom: 275px;
+          left: 260px;
+        }
+		
+		#dot9 {
+          bottom: 50px;
+          left: 260px;
+        }
+		
+
+
+        #dot1.centered {
+          transform: translate(200px, 200px);
+        }
+
+        #dot2.centered {
+          transform: translate(-200px, 200px);
+        }
+
+        #dot3.centered {
+          transform: translate(200px, -200px);
+        }
+
+        #dot4.centered {
+          transform: translate(-200px, -200px);
+        }
+		
+		#dot5.centered {
+          transform: translate(-40px, 200px);
+        }
+		
+        #dot6.centered {
+          transform: translate(-200px, 0px);
+        }
+
+        #dot7.centered {
+          transform: translate(175px, -40px);
+        }
+
+        #dot8.centered {
+          transform: translate(10px, -10px);
+        }
+
+        #dot9.centered {
+          transform: translate(-10px, -200px);
+        }
+
+        .dot.red-border {
+          border: 4px solid red;
+        }
+
+    </style>
+  </head>
+  <body>
+    <div class="main-wrapper">
+        <div id="dot1" class="dot"></div>
+        <div id="dot2" class="dot"></div>
+        <div id="dot3" class="dot"></div>
+        <div id="dot4" class="dot"></div>
+        <div id="dot5" class="dot"></div>
+        <div id="dot6" class="dot"></div>
+        <div id="dot7" class="dot"></div>
+        <div id="dot8" class="dot"></div>
+        <div id="dot9" class="dot"></div>
+
+    </div>
+
+    <script>
+      var dot1 = document.getElementById('dot1');
+      var dot2 = document.getElementById('dot2');
+      var dot3 = document.getElementById('dot3');
+      var dot4 = document.getElementById('dot4');
+	  var dot5 = document.getElementById('dot5');
+      var dot6 = document.getElementById('dot6');
+      var dot7 = document.getElementById('dot7');
+      var dot8 = document.getElementById('dot8');
+	  var dot9 = document.getElementById('dot9');
+
+      makeAnimation();
+      
+      function makeAnimation() {
+        setTimeout(addCenteredClass, 500);
+        setTimeout(changeBorderColor, 1500);
+      }
+
+      function addCenteredClass() {
+        dot1.classList.add("centered");
+        dot2.classList.add("centered");
+        dot3.classList.add("centered");
+        dot4.classList.add("centered");
+	    dot5.classList.add("centered");
+        dot6.classList.add("centered");
+        dot7.classList.add("centered");
+        dot8.classList.add("centered");
+		dot9.classList.add("centered");
+      }
+
+      function changeBorderColor() {
+        dot1.classList.add("red-border");
+        dot2.classList.add("red-border");
+        dot3.classList.add("red-border");
+        dot4.classList.add("red-border");
+        dot5.classList.add("red-border");
+        dot6.classList.add("red-border");
+        dot7.classList.add("red-border");
+        dot8.classList.add("red-border");
+		dot9.classList.add("red-border");
+      }
+    </script>
+  </body>
+</html>
