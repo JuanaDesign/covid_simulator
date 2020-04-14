@@ -2,42 +2,68 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8">
-    <title>Dots</title>
-    <link rel="stylesheet" type="text/css" href="./style.css">
+    <title>Simulador1</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
     <style>
-        .main-wrapper {
-          position: relative;
-          width: 400px;
-          height: 400px;
-          padding: 100px;
-          border: 1px solid black;
-        }
-        .dot {
-          position: absolute;
-          width: 60px;
-          height: 60px;
-          background-color: black;
-          border-radius: 40px;
-          transition: 1s all ease-out;
-          border: 4px solid green;
-        }
+		body {
+			width: 100%;
+			height: 100%;
+		}
+		
+		
+    .main-wrapper {
+      position: absolute;
+		  top: 50%;
+		  left: 50%;
+		  transform: translate(-50%, -50%);
+      width: 600px;
+      height: 600px;
+      border: 1px solid black;
+		}
+		
+		.main-wrapper h1 {
+			position: absolute;
+			bottom: 200px;
+			left: 630px;
+			width: 400px;
+			font-family: 'Lato', sans-serif;
+		}
+		
+		.main-wrapper p {
+			position: absolute;
+			left: 630px;
+			top: 370px;
+			width: 300px;
+			font-family: 'Lato', sans-serif;
+			font-size:15px
+		}
+		
+    .dot {
+      position: absolute;
+      width: 60px;
+      height: 60px;
+      background-color: black;
+      border-radius: 40px;
+      transition: 1s all ease-out;
+      border: 4px solid green;
+    }
 
-        #dot1 {
-          top: 50px;
-          left: 50px;
-        }
-        #dot2 {
-          top: 50px;
-          right: 50px;
-        }
-        #dot3 {
-          bottom: 50px;
-          left: 50px;
-        }
-        #dot4 {
-          bottom: 50px;
-          right: 50px;
-        }
+    #dot1 {
+      top: 50px;
+      left: 50px;
+    }
+    #dot2 {
+      top: 50px;
+      right: 50px;
+    }
+    #dot3 {
+      bottom: 50px;
+      left: 50px;
+    }
+    #dot4 {
+      bottom: 50px;
+      right: 50px;
+    }
 		
 		#dot5 {
           top: 50px;
@@ -110,17 +136,21 @@
   </head>
   <body>
     <div class="main-wrapper">
-        <div id="dot1" class="dot"></div>
-        <div id="dot2" class="dot"></div>
-        <div id="dot3" class="dot"></div>
-        <div id="dot4" class="dot"></div>
-        <div id="dot5" class="dot"></div>
-        <div id="dot6" class="dot"></div>
-        <div id="dot7" class="dot"></div>
-        <div id="dot8" class="dot"></div>
-        <div id="dot9" class="dot"></div>
-
+      <div id="dot1" class="dot"></div>
+      <div id="dot2" class="dot"></div>
+      <div id="dot3" class="dot"></div>
+      <div id="dot4" class="dot"></div>
+      <div id="dot5" class="dot"></div>
+      <div id="dot6" class="dot"></div>
+      <div id="dot7" class="dot"></div>
+      <div id="dot8" class="dot"></div>
+      <div id="dot9" class="dot"></div>
+	    <h1 style="color:red; font-size:20px " >CONTEXTO</h1>
+    	<p> Actualmente la sociedad se encuentra en una situación de emergencia sanitaria por el COVID-19, teniendo que aislarse en sus residencias habituales. Por ello, reciben diariamente una sobrecarga informativa sobre el coronavirus apareciendo innumerables noticias, gráficos e ilustraciones sobre las actuaciones a desarrollar. 
+ <br>       
+El gobierno se está preparando para el desconfinamiento de la sociedad e informando sobre la importancia de seguir las indicaciones de seguridad.<br> </p>
     </div>
+
 
     <script>
       var dot1 = document.getElementById('dot1');
